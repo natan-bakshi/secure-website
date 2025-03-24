@@ -28,6 +28,7 @@ def sign_up():
         elif check_user(username):
             error_message = "Username taken"
         else:
+            print("well done")
             create_user(username, password1)
             return render_template('home.html')
 
