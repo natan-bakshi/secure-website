@@ -7,15 +7,17 @@ import bcrypt
 BAD_CHARS = {" ", "'", '"', ';', '-','--', '<', '>','/', '=', ';'}
 
 
-def print_users():
-    connection = sqlite3.connect('users.db')
-    c = connection.cursor()
-    c.execute("SELECT * FROM users")
-    users = c.fetchall()
-    for user in users:
-        print(user)
-    connection.close()
+# def print_users():
+#     connection = sqlite3.connect('users.db')
+#     c = connection.cursor()
+#     c.execute("SELECT * FROM users")
+#     users = c.fetchall()
+#     for user in users:
+#         print(user)
+#     connection.close()
 
+def encrypt_password(password):
+    pass
 
 def check_user(username):
     connection = sqlite3.connect('users.db')
