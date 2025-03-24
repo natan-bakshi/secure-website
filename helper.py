@@ -1,6 +1,6 @@
 import sqlite3
 import uuid
-BAD_CHARS = {" ", "'", '"', ';', '--', '<', '>','/', '=', '&', ';'}
+BAD_CHARS = {" ", "'", '"', ';', '-','--', '<', '>','/', '=', ';'}
 
 
 def print_users():
@@ -12,6 +12,13 @@ def print_users():
         print(user)
     connection.close()
 
+# def check_db():
+#     connection = sqlite3.connect('users.db')
+#     c = connection.cursor()
+#     c.execute("SELECT username FROM users WHERE username = dd%09DROP%09TABLE%09users)
+#     user = c.fetchone()
+#
+#     connection.close()
 
 def check_user(username):
     connection = sqlite3.connect('users.db')
@@ -56,3 +63,5 @@ def create_user(username, password):
     connection.commit()
     connection.close()
 
+
+print_users()
