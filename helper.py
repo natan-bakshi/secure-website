@@ -16,8 +16,6 @@ BAD_CHARS = {" ", "'", '"', ';', '-','--', '<', '>','/', '=', ';'}
 #         print(user)
 #     connection.close()
 
-def encrypt_password(password):
-    pass
 
 def check_user(username):
     connection = sqlite3.connect('users.db')

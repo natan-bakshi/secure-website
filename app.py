@@ -19,8 +19,6 @@ def sign_up():
         password1 = request.form['password1']
         password2 = request.form['password2']
 
-        password1 = encrypt_password(password1)
-        password2 = encrypt_password(password2)
 
         if not check_characters(username):
             error_message = "Unauthorized characters"
@@ -44,8 +42,6 @@ def log_in():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-
-        password = encrypt_password(password)
 
         if not check_characters(username):
             error_message = "you are very naughty"
